@@ -1,0 +1,5 @@
+[Config]
+
+api_key = XXXXX-XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+
+path = C:\Riot Games\League of Legends\LeagueClient.exe
