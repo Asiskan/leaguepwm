@@ -286,6 +286,18 @@ def delete_acc():
     load_data()
 
 
+def delete_if_empty(field):
+    if field.get() == "Username":
+        field.delete('0', 'end')
+    if field.get() == "Password":
+        field.delete('0', 'end')
+    if field.get() == "In Game Name":
+        field.delete('0', 'end')
+    else:
+        return
+
+
+
 def gui():
         global cols, treeframe, treescroll, update_button, name_entry, name_entry2, name_entry3, server_combobox, combo_list, mode_switch, style, widgets_frame, root
         root = tk.Tk()
@@ -304,17 +316,17 @@ def gui():
 
         name_entry = ttk.Entry(widgets_frame)
         name_entry.insert(0, "Username")
-        name_entry.bind("<FocusIn>", lambda e: name_entry.delete('0', 'end'))
+        name_entry.bind("<FocusIn>", lambda e: delete_if_empty(name_entry))
         name_entry.grid(row=0, column=0, padx=5, pady=(0, 5), sticky="ew")
 
         name_entry2 = ttk.Entry(widgets_frame)
         name_entry2.insert(0, "Password")
-        name_entry2.bind("<FocusIn>", lambda e: name_entry2.delete('0', 'end'))
+        name_entry2.bind("<FocusIn>", lambda e: delete_if_empty(name_entry2))
         name_entry2.grid(row=1, column=0, padx=5, pady=5, sticky="ew")
 
         name_entry3 = ttk.Entry(widgets_frame)
         name_entry3.insert(0, "In Game Name")
-        name_entry3.bind("<FocusIn>", lambda e: name_entry3.delete('0', 'end'))
+        name_entry3.bind("<FocusIn>", lambda e: delete_if_empty(name_entry3))
         name_entry3.grid(row=2, column=0, padx=5, pady=5, sticky="ew")
 
         server_combobox = ttk.Combobox(widgets_frame, values=combo_list)
@@ -330,8 +342,9 @@ def gui():
         treeframe = ttk.Frame(frame)
         treeframe.grid(row=0, column=1, pady=10)
         treescroll = ttk.Scrollbar(treeframe)
-        Grid.rowconfigure(treeframe, 0, weight=1)
-        Grid.columnconfigure(treeframe, 0, weight=1)
+
+        #Grid.rowconfigure(treeframe, 0, weight=1)
+        #Grid.columnconfigure(treeframe, 0, weight=1)
 
         treescroll.pack(side="right", fill="y")
 
