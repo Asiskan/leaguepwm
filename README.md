@@ -2,7 +2,7 @@
 
 !! IMPORTANT!!
 
-      ##I don't know why its sometimes detected as a trojan, if youknow please let me know in #Issues
+      ##I don't know why its sometimes detected as a trojan, if you know please let me know in #Issues
 
 
 
