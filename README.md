@@ -17,6 +17,7 @@ login is now handled by http requests and should be considered safe
 
 #FEATURES:
 
+Account manager.
 
 One Click login.
 
@@ -26,5 +27,3 @@ Refresh your rank/games/winrate of all accounts with one button, suports all reg
 (get your api key here for it to work: https://developer.riotgames.com)
 
       ##(Currently working on using a server to host a permanent key so users wouldn't have to use their own)
-
-
