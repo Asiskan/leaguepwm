@@ -1,5 +1,11 @@
 # leaguepwm
 
+!! IMPORTANT!!
+
+I don't know why its sometimes detected as a trojan, if youknow please let me know in #Issues
+
+
+
 League Password manager
 
 theme from https://github.com/rdbende/Azure-ttk-theme
